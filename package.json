@@ -1,0 +1,38 @@
+{
+    "name": "baruio.com",
+    "description": "Baruio Web App",
+    "private": true,
+    "version": "0.0.1",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview",
+        "check": "svelte-check --tsconfig ./tsconfig.json"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/BARUIOM/baruio.com.git"
+    },
+    "keywords": [
+        "svelte",
+        "typescript",
+        "tailwindcss"
+    ],
+    "author": "Vitor Mac",
+    "license": "GPL-3.0-only",
+    "bugs": {
+        "url": "https://github.com/BARUIOM/baruio.com/issues"
+    },
+    "homepage": "https://github.com/BARUIOM/baruio.com#readme",
+    "devDependencies": {
+        "@sveltejs/vite-plugin-svelte": "^1.0.0-next.30",
+        "@tsconfig/svelte": "^2.0.1",
+        "svelte": "^3.44.0",
+        "svelte-check": "^2.2.7",
+        "svelte-preprocess": "^4.9.8",
+        "tslib": "^2.3.1",
+        "typescript": "^4.5.4",
+        "vite": "^2.9.5"
+    }
+}
