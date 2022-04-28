@@ -6,7 +6,12 @@
         "module": "esnext",
         "resolveJsonModule": true,
         "baseUrl": ".",
-        "isolatedModules": true
+        "isolatedModules": true,
+        "paths": {
+            "@/*": [
+                "src/*"
+            ],
+        }
     },
     "include": [
         "src/**/*.d.ts",
