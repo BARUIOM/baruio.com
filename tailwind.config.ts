@@ -1,4 +1,6 @@
-export default {
+import type { TailwindConfig } from "tailwindcss/tailwind-config";
+
+const config: TailwindConfig = {
     content: [
         './index.html',
         './src/**/*.{svelte,js,ts,jsx,tsx}',
@@ -8,3 +10,5 @@ export default {
     },
     plugins: [],
 };
+
+export default config;
