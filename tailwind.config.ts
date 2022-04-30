@@ -6,7 +6,11 @@ const config: TailwindConfig = {
         './src/**/*.{svelte,js,ts,jsx,tsx}',
     ],
     theme: {
-        extend: {},
+        extend: {
+            colors: {
+                'dark': '#0a0a0a',
+            },
+        },
     },
     plugins: [],
 };
