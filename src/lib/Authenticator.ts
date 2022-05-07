@@ -15,6 +15,10 @@ export namespace Authenticator {
         return null;
     }
 
+    export function setUser(user: User): void {
+        localStorage.setItem('user', JSON.stringify(user));
+    }
+
     export function isAuthenticated() {
         return !!localStorage.getItem('user');
     }
