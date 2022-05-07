@@ -19,4 +19,15 @@ export namespace Authenticator {
         return !!localStorage.getItem('user');
     }
 
+    export async function validate(): Promise<boolean> {
+        const user = getUser();
+
+        if (user === null)
+            throw new Error('User not authenticated');
+
+        // TODO: validate user token
+
+        return true;
+    }
+
 }
