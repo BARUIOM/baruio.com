@@ -1,9 +1,12 @@
 <script lang="ts">
+    import { Baruio } from "@/lib/Baruio";
     import FormButton from "@/components/FormButton.svelte";
     import FormInput from "@/components/FormInput.svelte";
 
     let username = "";
     let password = "";
+
+    const spotifyLogin = () => Baruio.startOAuth();
 </script>
 
 <div class="login-page">
@@ -14,7 +17,11 @@
         <FormInput label="Password" type="password" bind:value={password} />
 
         <FormButton label="Login" color="#262626" />
-        <FormButton label="Sign in with Spotify" color="#1DB954" />
+        <FormButton
+            label="Sign in with Spotify"
+            color="#1DB954"
+            click={spotifyLogin}
+        />
     </div>
 </div>
 
