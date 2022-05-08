@@ -11,7 +11,10 @@
             "@/*": [
                 "src/*"
             ],
-        }
+        },
+        "types": [
+            "spotify-api"
+        ]
     },
     "include": [
         "src/**/*.d.ts",
