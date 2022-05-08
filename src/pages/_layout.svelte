@@ -20,5 +20,15 @@
 {#await validate()}
     <Loading />
 {:then}
-    <slot />
+    <main class="layout">
+        <div class="h-16 border-b border-white" />
+        <div class="h-full p-4"><slot /></div>
+        <div class="h-24 border-t border-white" />
+    </main>
 {/await}
+
+<style lang="scss">
+    main.layout {
+        @apply w-screen h-screen flex flex-col;
+    }
+</style>
