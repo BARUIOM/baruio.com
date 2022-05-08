@@ -27,4 +27,17 @@ export namespace Baruio {
         Authenticator.setUser({ accessToken, refreshToken });
     }
 
+    export async function refreshUserAccessToken() {
+        const { refreshToken } = Authenticator.getUser();
+        const response = await axios.post('/oauth/refresh', { refreshToken });
+
+        if (response.status !== 200)
+            throw new Error('Error refreshing access token');
+
+        const { data } = response;
+        const accessToken: string = data['access_token'];
+
+        Authenticator.setUser({ accessToken, refreshToken });
+    }
+
 }
