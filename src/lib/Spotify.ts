@@ -7,7 +7,9 @@ const client = new SpotifyWebApi();
 
 const setAccessToken = () => {
     const user = Authenticator.getUser();
-    client.setAccessToken(user.accessToken);
+    if (user && user.accessToken) {
+        client.setAccessToken(user.accessToken);
+    }
 };
 
 setAccessToken();
