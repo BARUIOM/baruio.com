@@ -1,15 +1,15 @@
 <script lang="ts">
-    import { goto } from "@roxi/routify";
+    import { useNavigate } from "svelte-navigator";
 
     export let cover: string;
     export let title: string;
     export let meta: { title: string; href?: string }[] = [];
     export let href: string;
 
-    const navigate = () => $goto(href);
+    const navigate = useNavigate();
 </script>
 
-<div class="card" on:click={navigate}>
+<div class="card" on:click={() => navigate(href)}>
     <div class="cover" style="background-image: url({cover});" />
 
     <div class="detail space-y-1">

@@ -1,6 +1,11 @@
 <script>
-    import { Router } from "@roxi/routify";
-    import { routes } from "../.routify/routes";
+    import { Router, Route } from "svelte-navigator";
+
+    import Home from "@/views/Home.svelte";
+    import Login from "@/views/Login.svelte";
 </script>
 
-<Router {routes} />
+<Router>
+    <Route path="/*" component={Home} />
+    <Route path="/login" component={Login} />
+</Router>
