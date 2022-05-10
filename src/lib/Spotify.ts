@@ -53,6 +53,7 @@ type SpotifyApi = SpotifyWebApi.SpotifyWebApiJs;
 type SpotifyApiFunction = keyof SpotifyApi;
 
 interface Spotify {
+    'getMySavedAlbums': SpotifyApi['getMySavedAlbums'];
     'getMySavedTracks': SpotifyApi['getMySavedTracks'];
     'getUserPlaylists': SpotifyApi['getUserPlaylists'];
 }
@@ -62,6 +63,7 @@ class Spotify {
 }
 
 const functions: SpotifyApiFunction[] = [
+    'getMySavedAlbums',
     'getMySavedTracks',
     'getUserPlaylists',
 ];
