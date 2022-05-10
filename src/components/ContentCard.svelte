@@ -13,7 +13,7 @@
     <div class="cover" style="background-image: url({cover});" />
 
     <div class="detail space-y-1">
-        <div class="truncate text-md font-bold">{title}</div>
+        <div class="truncate text-md font-medium">{title}</div>
 
         {#each meta as item}
             {#if item.href}
