@@ -1,10 +1,11 @@
 <script lang="ts">
-    import { Router, useNavigate, useParams } from "svelte-navigator";
+    import { Router, Route, useNavigate, useParams } from "svelte-navigator";
 
     import { Authenticator } from "@/lib/Authenticator";
     import { Baruio } from "@/lib/Baruio";
 
     import Loading from "@/views/Loading.svelte";
+    import UserLibrary from "@/views/UserLibrary.svelte";
 
     const navigate = useNavigate();
     const params = useParams();
@@ -35,7 +36,9 @@
     <Router>
         <main class="layout">
             <div class="header" />
-            <div class="content" />
+            <div class="content">
+                <Route path="/" component={UserLibrary} />
+            </div>
             <div class="player" />
         </main>
     </Router>

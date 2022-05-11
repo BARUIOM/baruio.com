@@ -6,7 +6,7 @@ import {
 
 import Spotify from './Spotify';
 
-export const loadUserSavedAlbums = async (): Promise<void> => {
+const loadUserSavedAlbums = async (): Promise<void> => {
     if (userSavedAlbums.loaded)
         return;
 
@@ -15,7 +15,7 @@ export const loadUserSavedAlbums = async (): Promise<void> => {
         .then((e) => userSavedAlbums.set([...e]));
 };
 
-export const loadUserSavedPlaylists = async (): Promise<void> => {
+const loadUserSavedPlaylists = async (): Promise<void> => {
     if (userSavedPlaylists.loaded)
         return;
 
@@ -24,11 +24,17 @@ export const loadUserSavedPlaylists = async (): Promise<void> => {
         .then((e) => userSavedPlaylists.set([...e]));
 };
 
-export const loadUserSavedTracks = async (): Promise<void> => {
+const loadUserSavedTracks = async (): Promise<void> => {
     if (userSavedTracks.loaded)
         return;
 
     await Spotify.getMySavedTracks()
         .then(Spotify.getAll)
         .then((e) => userSavedTracks.set([...e]));
+};
+
+export const loadUserLibrary = async (): Promise<void> => {
+    await loadUserSavedPlaylists();
+    await loadUserSavedAlbums();
+    await loadUserSavedTracks();
 };
