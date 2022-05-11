@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Router, Route, useNavigate, useParams } from "svelte-navigator";
+    import { Router, Route, useLocation, useNavigate } from "svelte-navigator";
 
     import { Authenticator } from "@/lib/Authenticator";
     import { Baruio } from "@/lib/Baruio";
@@ -7,12 +7,14 @@
     import Loading from "@/views/Loading.svelte";
     import UserLibrary from "@/views/UserLibrary.svelte";
 
+    const location = useLocation();
     const navigate = useNavigate();
-    const params = useParams();
 
     const check = () => {
-        if ("code" in $params) {
-            const code = $params["code"];
+        const params = new URLSearchParams($location.search);
+
+        if (params.has("code")) {
+            const code = params.get("code");
 
             return Baruio.validateOAuth(code);
         }
