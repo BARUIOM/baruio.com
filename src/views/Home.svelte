@@ -23,13 +23,9 @@
     };
 
     const validate = async () =>
-        check()
-            .then(() => {
-                navigate("/", { replace: true });
-            })
-            .catch(() => {
-                navigate("/login", { replace: true });
-            });
+        check().catch(() => {
+            navigate("/login", { replace: true });
+        });
 </script>
 
 {#await validate()}
