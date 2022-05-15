@@ -25,7 +25,7 @@
     </div>
 </div>
 
-<style lang="scss">
+<style lang="postcss">
     div.card {
         @apply h-full p-4 rounded bg-neutral-900 cursor-pointer space-y-4;
 

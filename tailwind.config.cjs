@@ -1,9 +1,7 @@
-import type { TailwindConfig } from "tailwindcss/tailwind-config";
-
-const config: TailwindConfig = {
+module.exports = {
     content: [
         './index.html',
-        './src/**/*.{svelte,js,ts,jsx,tsx}',
+        './src/**/*.svelte',
     ],
     theme: {
         extend: {
@@ -14,5 +12,3 @@ const config: TailwindConfig = {
     },
     plugins: [],
 };
-
-export default config;

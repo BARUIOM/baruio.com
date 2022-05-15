@@ -46,7 +46,7 @@
     </Router>
 {/await}
 
-<style lang="scss">
+<style lang="postcss">
     main.layout {
         @apply w-screen h-screen flex flex-col;
 

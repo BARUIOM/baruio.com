@@ -10,7 +10,7 @@
 </script>
 
 <div class="login-page">
-    <div class="card w-full md:w-1/2 xl:w-1/3 2xl:w-1/4">
+    <div class="card space-y-4 w-full md:w-1/2 xl:w-1/3 2xl:w-1/4">
         <div class="text-xl text-center">Connect to Baruio Music</div>
 
         <FormInput label="Username" bind:value={username} />
@@ -25,12 +25,12 @@
     </div>
 </div>
 
-<style lang="scss">
+<style lang="postcss">
     div.login-page {
         @apply w-screen h-screen p-4 flex justify-center items-center;
 
-        div.card {
-            @apply rounded p-4 space-y-4 bg-neutral-900 flex flex-col;
+        > div.card {
+            @apply rounded p-4 bg-neutral-900 flex flex-col;
         }
     }
 </style>

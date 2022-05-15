@@ -18,7 +18,7 @@
     </div>
 </div>
 
-<style lang="scss">
+<style lang="postcss">
     div.track-item {
         @apply h-14 flex items-center cursor-pointer rounded;
 

@@ -22,7 +22,7 @@
     </button>
 </div>
 
-<style lang="scss">
+<style lang="postcss">
     button {
         @apply w-full h-8 rounded;
         background-color: var(--background-color);

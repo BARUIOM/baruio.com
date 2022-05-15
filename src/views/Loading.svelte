@@ -14,9 +14,9 @@
     </figure>
 </div>
 
-<style lang="scss">
+<style lang="postcss">
     $size: 200;
-    $dash: $size * 2;
+    $dash: calc($size * 2);
 
     div.loading {
         @apply w-screen h-screen flex justify-center items-center;
@@ -25,8 +25,8 @@
     }
 
     figure {
-        width: #{$size}px;
-        height: #{$size}px;
+        width: $(size)px;
+        height: $(size)px;
     }
 
     svg.circular {
@@ -54,12 +54,18 @@
             stroke-dashoffset: 0;
         }
         50% {
-            stroke-dasharray: $dash * 0.5, $dash;
-            stroke-dashoffset: -($dash * 0.175);
+            $array: calc($dash * 0.5);
+            $offset: calc(-1 * $dash * 0.175);
+
+            stroke-dasharray: $array, $dash;
+            stroke-dashoffset: $offset;
         }
         100% {
-            stroke-dasharray: $dash * 0.5, $dash;
-            stroke-dashoffset: -($dash * 0.62);
+            $array: calc($dash * 0.5);
+            $offset: calc(-1 * $dash * 0.62);
+
+            stroke-dasharray: $array, $dash;
+            stroke-dashoffset: $offset;
         }
     }
 </style>

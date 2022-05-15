@@ -15,7 +15,7 @@
     <input class:pill={rounded} {type} {value} on:input={onInput} />
 </div>
 
-<style lang="scss">
+<style lang="postcss">
     input {
         @apply w-full h-8 px-2 mt-1 rounded bg-neutral-800 outline-none;
     }

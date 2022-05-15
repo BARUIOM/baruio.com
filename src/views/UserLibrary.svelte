@@ -51,7 +51,7 @@
     {/each}
 </div>
 
-<style lang="scss">
+<style lang="postcss">
     div.title {
         @apply p-2 text-2xl font-bold border-b border-white/10;
     }

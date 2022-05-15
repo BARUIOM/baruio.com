@@ -9,3 +9,9 @@
     <Route path="/*" component={Home} />
     <Route path="/login" component={Login} />
 </Router>
+
+<style global lang="postcss">
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+</style>
