@@ -43,21 +43,31 @@
 {/await}
 
 <style lang="postcss">
-    main.layout {
-        @apply w-screen h-screen flex flex-col;
+    $header: 4rem;
+    $player: 5rem;
 
+    $transparent: rgba(0, 0, 0, 0.5);
+
+    main {
         div.header {
-            @apply h-16 border-b border-white;
-            min-height: 4rem;
+            @apply w-full fixed top-0 z-10 border-b border-white/10;
+            background-color: $transparent;
+            backdrop-filter: blur(30px);
+            min-height: $header;
+            height: $header;
         }
 
         div.content {
-            @apply h-full p-2 overflow-auto;
+            @apply z-0;
+            padding: $header 0.5rem $player 0.5rem;
         }
 
         div.player {
-            @apply h-24 border-t border-white;
-            min-height: 6rem;
+            @apply w-full fixed bottom-0 z-10 border-t border-white/10;
+            background-image: linear-gradient($transparent 0%, #000 100%);
+            backdrop-filter: blur(30px);
+            min-height: $player;
+            height: $player;
         }
     }
 </style>
