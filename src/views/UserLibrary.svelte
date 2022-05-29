@@ -20,7 +20,7 @@
 <div class="title">Your playlists</div>
 <div class="card-collection">
     {#each $playlists as playlist}
-        <div class="w-6/12 sm:w-3/12 lg:w-2/12 2xl:w-1/12">
+        <div class="w-1/2 sm:w-1/4 lg:w-1/6 xl:w-1/8 2xl:w-1/12">
             <ContentCard
                 cover={playlist.images[0].url}
                 title={playlist.name}
@@ -34,7 +34,7 @@
 <div class="title">Your liked albums</div>
 <div class="card-collection">
     {#each $albums as album}
-        <div class="w-6/12 sm:w-3/12 lg:w-2/12 2xl:w-1/12">
+        <div class="w-1/2 sm:w-1/4 lg:w-1/6 xl:w-1/8 2xl:w-1/12">
             <ContentCard
                 cover={album.album.images[0].url}
                 title={album.album.name}
