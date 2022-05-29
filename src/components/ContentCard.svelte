@@ -1,5 +1,6 @@
 <script lang="ts">
     import { useNavigate } from "svelte-navigator";
+    import Cover from "./Cover.svelte";
 
     export let cover: string;
     export let title: string;
@@ -9,8 +10,8 @@
     const navigate = useNavigate();
 </script>
 
-<div class="card" on:click={() => navigate(href)}>
-    <div class="cover" style="background-image: url({cover});" />
+<div class="card space-y-4" on:click={() => navigate(href)}>
+    <Cover url={cover} />
 
     <div class="detail space-y-1">
         <div class="truncate text-md font-medium">{title}</div>
@@ -27,12 +28,7 @@
 
 <style lang="postcss">
     div.card {
-        @apply h-full p-4 rounded bg-neutral-900 cursor-pointer space-y-4;
-
-        div.cover {
-            @apply bg-cover bg-center;
-            padding-bottom: 100%;
-        }
+        @apply h-full p-4 rounded bg-neutral-900 cursor-pointer;
 
         div.detail {
             min-height: 64px;
